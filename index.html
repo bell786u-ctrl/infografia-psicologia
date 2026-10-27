@@ -79,6 +79,14 @@ button{font-family:inherit}
 .pics[hidden]{display:none}
 .pics img{flex:1 1 150px;min-width:0;max-width:100%;max-height:230px;object-fit:cover;border-radius:22px;border:3px solid var(--m);background:#fff}
 .pics img.contain{object-fit:contain;padding:4px;box-sizing:border-box}
+.cite{font:600 13px/1.35 var(--sans);color:var(--muted)}
+.refs{background:var(--surface);border:3px solid var(--m,#BFDDF2);border-radius:30px;padding:20px 26px;display:flex;flex-direction:column;gap:10px}
+.refs h2{margin:0;font:800 22px/1.1 var(--disp);color:var(--ink)}
+.refs h3{margin:8px 0 0;font:700 15px/1.2 var(--disp);color:var(--ct)}
+.refs p{margin:0;padding-left:2em;text-indent:-2em;font:600 15px/1.45 var(--sans);color:var(--body);overflow-wrap:anywhere}
+.refs small{font:600 13px/1.4 var(--sans);color:var(--muted)}
+.refs .rp{--ct:var(--p-t)}.refs .rf{--ct:var(--f-t)}.refs .rg{--ct:var(--g-t)}
+.refs{--m:var(--f-m)}
 .tiles{display:flex;gap:10px}
 .tile{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border:3px solid transparent;border-radius:24px;padding:10px 6px;cursor:pointer;flex:1 1 0;min-width:0;background:var(--soft);transition:transform .15s}
 .tile:hover{transform:translateY(-3px)}
@@ -153,6 +161,7 @@ body{padding-block:12px 20px}
 <div class="card c1">
 <div class="pill">¿Qué es?</div>
 <div class="what">Teoría psicológica y método terapéutico desarrollado por Sigmund Freud a finales del siglo XIX y principios del XX. Explica el funcionamiento de la mente, enfocándose en los procesos inconscientes que influyen en la conducta, las emociones y los pensamientos.</div>
+<div class="cite">(Freud, 1900/1979a; 1923/1979b)</div>
 <div class="person"><img data-img="freud" alt="Retrato de Sigmund Freud"><div style="padding-bottom:6px"><div class="name">Sigmund Freud</div><div class="yrs">(1856–1939)</div></div></div>
 <div class="qbox"><div class="q">“El inconsciente es la verdadera vida psíquica.”</div><div class="yrs" style="margin-top:4px;text-align:right">Sigmund Freud</div></div>
 </div>
@@ -191,6 +200,7 @@ body{padding-block:12px 20px}
 <div class="card c1">
 <div class="pill">¿Qué es?</div>
 <div class="what">Corriente filosófica iniciada por Edmund Husserl a inicios del siglo XX. Busca estudiar los fenómenos tal como se presentan a la conciencia, sin interpretaciones previas ni explicaciones causales externas. Desde la psicología, se centra en la experiencia consciente del individuo.</div>
+<div class="cite">(Husserl, 1913/1949; Giorgi, 2009)</div>
 <div class="person"><img data-img="husserl" alt="Retrato de Edmund Husserl"><div style="padding-bottom:6px"><div class="name">Edmund Husserl</div><div class="yrs">(1859–1938)</div></div></div>
 <div class="qbox"><div class="q">“Volver a las cosas mismas.”</div><div class="yrs" style="margin-top:4px;text-align:right">Husserl</div></div>
 </div>
@@ -226,6 +236,7 @@ body{padding-block:12px 20px}
 <div class="card c1">
 <div class="pill">¿Qué es?</div>
 <div class="what">Surge en Alemania alrededor de 1912, de la mano de Max Wertheimer, Wolfgang Köhler, Kurt Koffka y Kurt Lewin. Se enfocó en la percepción y los canales sensoriales, sosteniendo que la mente organiza la información en totalidades o “formas”.</div>
+<div class="cite">(Wertheimer, 1923; Koffka, 1935; Köhler, 1947)</div>
 <div class="founders">
 <div><img data-img="wertheimer" alt="Max Wertheimer"><span class="yrs">Max Wertheimer</span></div>
 <div><img data-img="kohler" alt="Wolfgang Köhler"><span class="yrs">Wolfgang Köhler</span></div>
@@ -264,6 +275,21 @@ body{padding-block:12px 20px}
 <div class="imp"><div class="pill">Importancia</div><div class="what">Explica cómo se configuran las percepciones y cómo estas influyen en el pensamiento. Sus principios siguen siendo base en la psicología cognitiva, la neurociencia y el diseño de experiencias.</div></div>
 </div>
 </section>
+
+<footer class="refs" id="fuentes">
+<h2>Fuentes (APA 7)</h2>
+<h3 class="rp">Psicoanálisis</h3>
+<p>Freud, S. (1979a). <em>La interpretación de los sueños</em> (J. L. Etcheverry, Trad.). En J. Strachey (Ed.), <em>Obras completas</em> (Vols. 4–5). Amorrortu. (Obra original publicada en 1900)</p>
+<p>Freud, S. (1979b). <em>El yo y el ello</em> (J. L. Etcheverry, Trad.). En J. Strachey (Ed.), <em>Obras completas</em> (Vol. 19). Amorrortu. (Obra original publicada en 1923)</p>
+<h3 class="rf">Fenomenología</h3>
+<p>Giorgi, A. (2009). <em>The descriptive phenomenological method in psychology: A modified Husserlian approach</em>. Duquesne University Press.</p>
+<p>Husserl, E. (1949). <em>Ideas relativas a una fenomenología pura y una filosofía fenomenológica</em> (J. Gaos, Trad.). Fondo de Cultura Económica. (Obra original publicada en 1913)</p>
+<h3 class="rg">Gestalt</h3>
+<p>Koffka, K. (1935). <em>Principles of Gestalt psychology</em>. Harcourt, Brace.</p>
+<p>Köhler, W. (1947). <em>Gestalt psychology: An introduction to new concepts in modern psychology</em>. Liveright.</p>
+<p>Wertheimer, M. (1923). Untersuchungen zur Lehre von der Gestalt II. <em>Psychologische Forschung, 4</em>, 301–350.</p>
+<small>Imágenes: retratos e íconos elaborados a partir de la infografía original del equipo; fotografías e ilustraciones de apoyo aportadas por el equipo.</small>
+</footer>
 
 </div>
 
