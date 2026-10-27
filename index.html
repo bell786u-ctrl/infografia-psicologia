@@ -81,7 +81,11 @@ button{font-family:inherit}
 .pics img.contain{object-fit:contain;padding:4px;box-sizing:border-box}
 .cite{font:600 13px/1.35 var(--sans);color:var(--muted)}
 .refs{background:var(--surface);border:3px solid var(--m,#BFDDF2);border-radius:30px;padding:20px 26px;display:flex;flex-direction:column;gap:10px}
-.refs h2{margin:0;font:800 22px/1.1 var(--disp);color:var(--ink)}
+.refs summary{cursor:pointer;font:800 22px/1.1 var(--disp);color:var(--ink);list-style:none;display:flex;align-items:center;gap:10px}
+.refs summary::-webkit-details-marker{display:none}
+.refs summary::before{content:"";width:0;height:0;border-left:10px solid var(--ct,var(--f-t));border-top:7px solid transparent;border-bottom:7px solid transparent;transition:transform .15s}
+.refs[open] summary::before{transform:rotate(90deg)}
+.refs summary:focus-visible{outline:4px solid var(--ink);outline-offset:4px;border-radius:8px}
 .refs h3{margin:8px 0 0;font:700 15px/1.2 var(--disp);color:var(--ct)}
 .refs p{margin:0;padding-left:2em;text-indent:-2em;font:600 15px/1.45 var(--sans);color:var(--body);overflow-wrap:anywhere}
 .refs small{font:600 13px/1.4 var(--sans);color:var(--muted)}
@@ -276,8 +280,8 @@ body{padding-block:12px 20px}
 </div>
 </section>
 
-<footer class="refs" id="fuentes">
-<h2>Fuentes (APA 7)</h2>
+<details class="refs" id="fuentes">
+<summary>Fuentes</summary>
 <h3 class="rp">Psicoanálisis</h3>
 <p>Freud, S. (1979a). <em>La interpretación de los sueños</em> (J. L. Etcheverry, Trad.). En J. Strachey (Ed.), <em>Obras completas</em> (Vols. 4–5). Amorrortu. (Obra original publicada en 1900)</p>
 <p>Freud, S. (1979b). <em>El yo y el ello</em> (J. L. Etcheverry, Trad.). En J. Strachey (Ed.), <em>Obras completas</em> (Vol. 19). Amorrortu. (Obra original publicada en 1923)</p>
@@ -289,7 +293,7 @@ body{padding-block:12px 20px}
 <p>Köhler, W. (1947). <em>Gestalt psychology: An introduction to new concepts in modern psychology</em>. Liveright.</p>
 <p>Wertheimer, M. (1923). Untersuchungen zur Lehre von der Gestalt II. <em>Psychologische Forschung, 4</em>, 301–350.</p>
 <small>Imágenes: retratos e íconos elaborados a partir de la infografía original del equipo; fotografías e ilustraciones de apoyo aportadas por el equipo.</small>
-</footer>
+</details>
 
 </div>
 
